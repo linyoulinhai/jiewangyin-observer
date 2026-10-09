@@ -1,0 +1,43 @@
+{
+  "version": "2026-10-09-promotion-1",
+  "qr_url": "https://kanjian-archive-concept.chengbiliu3.chatgpt.site/",
+  "qr_error_correction": "M",
+  "cards": [
+    {
+      "path": "site-qr.png",
+      "bytes": 853,
+      "sha256": "ccf7fb7559029b9948afa0c7d4e61dafd7d7e5df08291485618e3924df768dd2"
+    },
+    {
+      "path": "cards/01-introduction.png",
+      "bytes": 198847,
+      "sha256": "ae0ef965602093ea4290d1168cdcc3395c0400626da546dee65e5b1254f75790"
+    },
+    {
+      "path": "cards/01-introduction.svg",
+      "bytes": 115058,
+      "sha256": "912d8832508f1be4c5354fa778262964927568cc07f7934296785e294dc81daa"
+    },
+    {
+      "path": "cards/02-sources.png",
+      "bytes": 197931,
+      "sha256": "882a4dd785395fc3405561f64513e482db729faa47b0d938b6af09bfda621360"
+    },
+    {
+      "path": "cards/02-sources.svg",
+      "bytes": 115065,
+      "sha256": "d77fa3628f3d270270c29822df888ef7085abcf4ad1e18f35b3f23919a3e431c"
+    },
+    {
+      "path": "cards/03-save-and-share.png",
+      "bytes": 198649,
+      "sha256": "d022c8c72ba52447eaa64a00fda916fedf3f3d3c6098ab8f715adfc2a4521681"
+    },
+    {
+      "path": "cards/03-save-and-share.svg",
+      "bytes": 115067,
+      "sha256": "072da650f266dc7444c283b4517e2ba06004c88db6e2f4545e5bceae64aacdeb"
+    }
+  ],
+  "notice": "Local code-rendered layout; no social posts or cloud uploads."
+}

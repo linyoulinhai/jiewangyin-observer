@@ -1,0 +1,7 @@
+{
+  "format": "jiewangyin-access-points-v1",
+  "version": "2026-10-09-promotion-1",
+  "entries": [],
+  "notice": "待实际上传和接收者测试后登记；空列表不表示已经建立网盘镜像。",
+  "填写说明": "每项记录label、url、version、公开提取码（可选）、expiresAt（可选）、downloadConditions和checkedAt。只登记允许公开的链接与条件，不提交账号、密码或私人资料。"
+}

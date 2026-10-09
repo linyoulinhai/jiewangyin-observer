@@ -51,10 +51,12 @@
 - [Cloudflare D1/R2](https://developers.cloudflare.com/)：现有后台存储接口；当前网站由Sites托管平台发布。服务提供者不是机构资料内容的审核或支持者。
 - **夜眼**：[临沂市第四人民医院外景照片原页](https://commons.wikimedia.org/wiki/File:The_Fourth_Hospital_of_Linyi_(Linyi_Mental_Hospital)_01.jpg)。照片按CC BY-SA 4.0使用，作者、来源和日期见 `dist/assets/real-photo-credit.txt`；该外景不证明不当行为。
 - 全国地区底图为DataV来源示意，本站保留原始GeoJSON；边界、字段和展示需单独核对，不宣称是已审核标准地图。
+- [Pillow](https://python-pillow.github.io/)与[qrcode](https://github.com/lincolnloop/python-qrcode)及贡献者：新增宣传卡的本地渲染与原站二维码生成；[Noto CJK](https://github.com/notofonts/noto-cjk)字体用于本机中文字形渲染，下载包不附带字体文件。
+- [FFmpeg](https://ffmpeg.org/)及贡献者：新增宣传预览工具通过本机FFmpeg/libx264构建30秒静音竖屏视频，未分发工具二进制。原有浏览器字节分包工具仍未实现可播放视频切段/合成。
 
 ## 保留为下一阶段参考的工具
 
-[Tella / Horizontal](https://tella.app/)、[ProofMode / Guardian Project](https://www.proofmode.org/)、[OpenArchive / Save](https://www.open-archive.org/)、[FFmpeg](https://ffmpeg.org/)、[ffmpeg.wasm](https://github.com/ffmpegwasm/ffmpeg.wasm)、[Giscus](https://github.com/giscus/giscus)均已作为相关办法研究。本站现有媒体工具未调用FFmpeg，不把这些候选写成已完成集成。
+[Tella / Horizontal](https://tella.app/)、[ProofMode / Guardian Project](https://www.proofmode.org/)、[OpenArchive / Save](https://www.open-archive.org/)、[ffmpeg.wasm](https://github.com/ffmpegwasm/ffmpeg.wasm)、[Giscus](https://github.com/giscus/giscus)均已作为相关办法研究，尚未接入正式投稿和论坛流程。FFmpeg的实际宣传预览用途另列在上方，不把候选写成已完成集成。
 
 ## 怎样补充署名与来源
 

@@ -6,6 +6,14 @@
 
 [查看网站](https://kanjian-archive-concept.chengbiliu3.chatgpt.site/) · [详细项目说明](docs/project-guide.md) · [下载与复制](docs/download-and-deploy.md) · [参与贡献](CONTRIBUTING.md) · [资料查找交接](docs/research-handoff.txt) · [原作者与致谢](ACKNOWLEDGEMENTS.md) · [各平台传播与保存](docs/multiplatform-distribution.md)
 
+## 拿去宣传与保存
+
+新增[手机宣传与网盘交接材料](docs/promotion-kit/README.md)：评论区有链接/无链接文案、三张1080×1440图文卡片、原站二维码、30秒口播/字幕、志愿任务、网盘手机上传说明与接收测试表。普通用户从[最新发行](https://github.com/linyoulinhai/jiewangyin-observer/releases/latest)下载标注“手机宣传与网盘交接包”的ZIP，另存后看“先读我.txt”；静音竖屏视频预览是单独附件。
+
+<img src="docs/promotion-kit/cards/01-introduction.png" alt="宣传卡：查找机构与出处，保存公开资料，补充线索；附来源作者与原站二维码" width="320">
+
+账号、网盘上传、分享设置、社交发帖和评论由维护者/自愿参与者自己操作。本项目不自动投放；[下一步清单](docs/promotion-kit/接下来由你完成.txt)区分准备完成与待实际测试的工作。原有84项备选路线继续保留。
+
 ## 项目提供者与来源
 
 感谢 **[FunctionSir及PanDefenseProject贡献者](https://github.com/FunctionSir/PanDefenseProject)**、**[goodpsychologistclaw及nct-archive贡献者](https://github.com/goodpsychologistclaw/nct-archive)** 提供公开目录基础，感谢 **[NO-CONVERSION-THERAPY](https://github.com/NO-CONVERSION-THERAPY)**、BornFreeFearlessinLove、2beTechnetium、Perity-ctrl等原作者提供可研究的相关项目。这里保留原作者署名与实际使用范围，不将他们写成已经加入本站的合作方。素材作者、工具贡献者与全部来源见[致谢页](ACKNOWLEDGEMENTS.md)。

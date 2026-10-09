@@ -1,0 +1,21 @@
+戒网瘾机构观察 · 手机宣传与网盘交接包
+版本：2026-10-09 / promotion-1
+
+先做三件事：
+1. 宣传：打开“评论区与短介绍.txt”选一段；图文可配cards目录内三张PNG，顺序01、02、03。
+2. 保存：把“公开资料”目录中需要的文件上传到你自己的网盘；按“网盘上传步骤.txt”创建分享并测试。
+3. 接力：另存一份到真正的手机文件目录或第二台设备；有自愿维护者时转交公开包和版本号。
+
+index.html是离线导读与复制入口；手机预览器不能执行脚本时直接用TXT、PNG和CSV。
+SVG是可修改的排版源文件；PNG适合普通用户直接发图。
+此目录的视频是脚本与字幕，下载发行中的MP4另提供静音图文预览；未代你发布。
+
+原站：https://kanjian-archive-concept.chengbiliu3.chatgpt.site/
+源代码：https://github.com/linyoulinhai/jiewangyin-observer
+发行下载：https://github.com/linyoulinhai/jiewangyin-observer/releases
+
+感谢FunctionSir/PanDefenseProject、goodpsychologistclaw/nct-archive及公开资料贡献者；完整来源与许可在“来源与许可”目录。代码许可不能代替图片视频或个人经历的传播授权。
+目录有1251份待核对来源记录；收录不等于违法认定，也不等于机构仍在经营。
+
+公开包不含私人账号、回执、私人投稿、原始联系方式、真实原件或运行数据库。
+资料有更新或更正时请换成新版本，并通知你转交给的副本维护者。
