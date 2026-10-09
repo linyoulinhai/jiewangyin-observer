@@ -8,6 +8,12 @@
 
 ## 拿去宣传与保存
 
+先按[国内手机主用流程](docs/domestic-primary.md)拿到、另存、转交一份公开包。普通读者不必理解GitHub或进入私有库；[跨境/特殊网络条件备用](docs/overseas-backup.md)单独保留。
+
+新增[可接力的资料源与审核导出](docs/replicable-workflow.md)：私有索引更频繁整理，公有库审核后发布。`scripts/release-data.py`可从公开JSON重建自己的整理索引，再生成完整CSV/JSON/JS、变化清单、许可与媒体小包；它不上传原件、不自动发帖。视频原件、公开播放版和获准转交版分开保存。当前原始私人库仍在本地，新私有索引以既有公开目录起步。
+
+维护者可下载发行中的“可复制数据源起步包”，不安装npm即可重建目录。开发者也可运行`python3 scripts/build-replication-kit.py --output /path/outside-repo/data-starter.zip`生成同样的公开交接包。已建立独立私有整理仓库，权限与公有库分开；普通用户只需要公开包。
+
 新增[手机宣传与网盘交接材料](docs/promotion-kit/README.md)：评论区有链接/无链接文案、三张1080×1440图文卡片、原站二维码、30秒口播/字幕、志愿任务、网盘手机上传说明与接收测试表。普通用户从[最新发行](https://github.com/linyoulinhai/jiewangyin-observer/releases/latest)下载标注“手机宣传与网盘交接包”的ZIP，另存后看“先读我.txt”；静音竖屏视频预览是单独附件。
 
 <img src="docs/promotion-kit/cards/01-introduction.png" alt="宣传卡：查找机构与出处，保存公开资料，补充线索；附来源作者与原站二维码" width="320">
@@ -22,7 +28,7 @@
 
 [多平台指南](docs/multiplatform-distribution.md)现有**84项平台与形式、9组路线**，包含国内社交平台、在线文档、网盘、源码镜像、Wiki/论坛、静态托管、境外备用与手机离线接力。已上线与候选分开，不承诺所有方案永久免费或国内都可达。
 
-微信/QQ可转交小ZIP和导读；微博、贴吧、知乎、小红书可发公开图文导读；B站、抖音、快手、视频号展示授权播放版；腾讯文档/飞书等放可查目录；蓝奏、123、移动/天翼等试公开包下载；GitHub Releases仍保留为可分发公开媒体包的途径。各项操作、公开范围、免费条件与下载测试写在指南中，保留现有备选。
+微信/QQ可转交小ZIP和导读；微博、贴吧、知乎、小红书可发公开图文导读；B站、抖音、快手、视频号展示授权播放版；腾讯文档/飞书等放可查目录；蓝奏、123、移动/天翼等试公开包下载。GitHub及境外存储作为维护端和备用，不是国内用户的唯一入口。各项操作、公开范围、免费条件与下载测试写在指南中，保留现有备选。
 
 普通人可使用[平台发布模板](docs/distribution-templates/平台发布模板.txt)。维护者运行 `python3 scripts/build-distribution-kit.py --output /path/outside-repo/公开传播导读包.zip` 生成包含署名、说明、目录、网站包和校验清单的转交ZIP。程序只打包公开白名单，不上传或发送消息。
 

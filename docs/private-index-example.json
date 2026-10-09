@@ -1,0 +1,40 @@
+{
+  "format": "jiewangyin-private-index-v1",
+  "updated_at": "2026-10-09",
+  "entries": [
+    {
+      "public": {
+        "id": "DEMO-NEW-001",
+        "name": "虚构待审条目：请勿用于事实发布",
+        "alias": "",
+        "region": "待确认",
+        "city": "待确认",
+        "summary": "这里仅演示新增资料格式。",
+        "verification": "待核对",
+        "originalVerification": "待核实",
+        "sourceTypes": [
+          "example"
+        ],
+        "sources": [
+          "https://example.org/source"
+        ],
+        "capturedAt": "2026-10-09",
+        "operatingStatus": "当前状态未核实",
+        "version": "draft-1",
+        "regionNote": "虚构格式示例",
+        "isSource": true,
+        "materials": [],
+        "stories": []
+      },
+      "media": [],
+      "private": {},
+      "review": {
+        "status": "pending",
+        "scope": "directory",
+        "reviewer": "",
+        "date": "",
+        "content_sha256": ""
+      }
+    }
+  ]
+}

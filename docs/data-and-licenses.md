@@ -6,6 +6,8 @@
 
 处理程序源文本在 `dist/tools/build-local-library.py.txt`，供检查转换方式；它依赖原本地工作区与私人输入，不能在新克隆仓库中直接执行。公开CSV/JSON是可使用的数据副本，不是已核实事实清单。
 
+新增独立的`scripts/release-data.py`与[接力说明](replicable-workflow.md)：新克隆者可以用**既有公开JSON**初始化自己的整理索引，审核新改动，再重建公开快照、署名许可和获准转交媒体包。这个可复制流程不需要原维护者的私人工作区，也不能恢复未公开的私人字段或没有保存的原件。现有1251条基线已公开不等于事实核对完成。
+
 - 新编写代码及说明：根目录MIT许可；第三方材料不自动适用MIT。
 - NCT archive：上游标注Unlicense，见 `dist/NCT-LICENSE.txt` 与 `dist/SOURCE-LICENSES.txt`。
 - PanDefenseProject来源：保留AGPL-3.0原文和处理程序，见 `dist/PanDefense-LICENSE.txt`。相关复制/改编继续遵循该来源条件。

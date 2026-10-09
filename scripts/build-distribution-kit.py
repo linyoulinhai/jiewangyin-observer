@@ -9,6 +9,9 @@ args=p.parse_args();target=Path(args.output).expanduser().resolve()
 if target.is_relative_to(ROOT):p.error('Keep generated handoff bundles outside this repository')
 if target.exists():p.error('Output exists; choose a new version/path')
 files={
+ '国内主用.md':ROOT/'docs/domestic-primary.md',
+ '跨境与特殊网络条件备用.md':ROOT/'docs/overseas-backup.md',
+ '公私两库与资料源复制.md':ROOT/'docs/replicable-workflow.md',
  '项目说明.md':ROOT/'README.md',
  '详细项目说明.md':ROOT/'docs/project-guide.md',
  '项目提供者与致谢.md':ROOT/'ACKNOWLEDGEMENTS.md',

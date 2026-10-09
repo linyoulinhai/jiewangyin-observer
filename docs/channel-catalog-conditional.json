@@ -1,0 +1,155 @@
+{
+  "updated_at": "2026-10-09",
+  "notice": "这是渠道与形式清单，不是已建立平台数量或独立备份数量。未标已建立者均未创建、未发布、未发消息。宣传/技术路径为项目建议；官方规则核对程度和账号实测限制写在正文。",
+  "channels": [
+    {
+      "group": "Wiki与论坛备用形式",
+      "name": "TiddlyWiki / Tiddlyhost",
+      "url": "https://tiddlyhost.com/",
+      "action": "可把文字档案做成单文件Wiki；维护者保存HTML，托管入口另设置。",
+      "limit": "大量视频另存，手机版本和导出实际检查。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "deployment-dependent",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+    },
+    {
+      "group": "Wiki与论坛备用形式",
+      "name": "FeatherWiki",
+      "url": "https://feather.wiki/",
+      "action": "小型单文件公开目录可随文件转交，保持来源和版本信息。",
+      "limit": "不把所有图片视频塞入一个巨大HTML，手机读取能力先测试。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "deployment-dependent",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+    },
+    {
+      "group": "Wiki与论坛备用形式",
+      "name": "Miraheze",
+      "url": "https://miraheze.org/",
+      "action": "准备项目范围和许可说明，按平台流程申请Wiki；先导入小样，导出文字另存。",
+      "limit": "是否接受建站、账号权限、内容政策及导出附件范围待确认；没有上传到现有Wiki。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "deployment-dependent",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+    },
+    {
+      "group": "Wiki与论坛备用形式",
+      "name": "DokuWiki",
+      "url": "https://www.dokuwiki.org/",
+      "action": "维护者拥有合适空间时部署，公开文字以文件保存；公开阅读与编辑权限分开。",
+      "limit": "软件开源不代表PHP空间免费；插件、原件和备份完整性单独管理。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "deployment-dependent",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+    },
+    {
+      "group": "Wiki与论坛备用形式",
+      "name": "MediaWiki",
+      "url": "https://www.mediawiki.org/",
+      "action": "已有Wiki明确接纳资料时，使用Wikitext和分批导入，保留来源与许可。",
+      "limit": "本站1251条目录不等于符合维基百科条目标准；不能批量塞入无关Wiki，文字导出与媒体分别保存。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "deployment-dependent",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+    },
+    {
+      "group": "Wiki与论坛备用形式",
+      "name": "Discourse免费托管",
+      "url": "https://www.discourse.org/free",
+      "action": "候选备用互助论坛；官网当前提供Free计划、内置身份和审核，后续可建立公开导读/讨论。",
+      "limit": "国内实际可达性与附件、备份能力尚未测试；是否采用需与本站用户流程衔接。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "deployment-dependent",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+    },
+    {
+      "group": "Wiki与论坛备用形式",
+      "name": "Forumotion",
+      "url": "https://www.forumotion.com/",
+      "action": "候选论坛形式，建立公约与人工审核后，原件留在另一个受控存储位置。",
+      "limit": "导出迁移权限、广告、附件容量和手机号准入需核验，不因免费论坛就认为可完整搬迁。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "deployment-dependent",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+    },
+    {
+      "group": "网站与文件托管",
+      "name": "公益组织已有网站栏目",
+      "url": "https://github.com/linyoulinhai/jiewangyin-observer",
+      "action": "对方明确同意后放机构导读、公开副本或相关栏目，使用既有空间与维护资源。",
+      "limit": "目前无已确认合作方；栏目只是同站备份时，和原站共用账户/资源就不算独立灾备。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "deployment-dependent",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+    },
+    {
+      "group": "手机、离线与维护者接力",
+      "name": "PairDrop / ShareDrop",
+      "url": "https://pairdrop.net/",
+      "action": "作为近距离或浏览器传文件候选，传完整公开小包后接收者保存。",
+      "limit": "服务端、中继、连接失败与手机后台情况需测试；网页关闭前确认文件已收齐。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "deployment-dependent",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+    },
+    {
+      "group": "手机、离线与维护者接力",
+      "name": "Syncthing",
+      "url": "https://syncthing.net/",
+      "action": "由维护者配置设备之间同步公开资料或受控私有文件夹，再安排独立版本备份。",
+      "limit": "同步删除可能传播到其他设备，同步不是备份；手机平台支持和冲突处理单独核验。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "deployment-dependent",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+    },
+    {
+      "group": "手机、离线与维护者接力",
+      "name": "BitTorrent / Web Seed",
+      "url": "https://www.bittorrent.org/",
+      "action": "公开大包确定可传播后，维护者生成种子并保留做种节点，配HTTP备用和SHA256。",
+      "limit": "需持续有人做种，下载者网络地址可能对其他对等端可见，手机入口门槛较高；不传播私人材料。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "deployment-dependent",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+    },
+    {
+      "group": "手机、离线与维护者接力",
+      "name": "IPFS",
+      "url": "https://docs.ipfs.tech/concepts/persistence/",
+      "action": "把确认可公开的资料包固定在自己或合作节点，发布CID及HTTP备用入口；记录实际pin维护者。",
+      "limit": "只有CID没有持续提供节点不保证可下载；pin和网关有运维/额度成本，公开内容难保证完整召回，国内访问待测。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "deployment-dependent",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+    },
+    {
+      "group": "手机、离线与维护者接力",
+      "name": "邮件附件 / 邮件列表",
+      "url": "",
+      "action": "将小型导读、表格、许可和入口文字发给已授权接收者，公开大包另下载；对方另存文件。",
+      "limit": "平台附件上限、接收者隐私和通讯授权须确认；本次没有发送邮件。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "deployment-dependent",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+    }
+  ],
+  "access_tiers": {
+    "domestic-candidate": "国内主用候选，尚需账号与手机验收",
+    "offline-primary": "文件另存/独立维护者/局域网交接，安装来源另测",
+    "cross-border-backup": "跨境或特殊网络条件备用；原Sites和GitHub已建立但国内可达性待测",
+    "deployment-dependent": "开源工具/混合服务取决于部署地点和实际节点"
+  }
+}

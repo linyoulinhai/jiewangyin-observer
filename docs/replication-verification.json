@@ -1,0 +1,27 @@
+{
+  "archive_checks": {
+    "jiewangyin-data-starter-2026-10-09.3.zip": {
+      "files": 24,
+      "checksums": 23,
+      "crc": true
+    },
+    "jiewangyin-promotion-kit-2026-10-09.3.zip": {
+      "files": 36,
+      "checksums": 35,
+      "crc": true
+    }
+  },
+  "channel_counts": {
+    "domestic": 43,
+    "backup": 28,
+    "conditional": 13
+  },
+  "fresh_copy": {
+    "without_original_workspace": true,
+    "record_count": 1251,
+    "lossless_public_fields": true,
+    "private_media_restored": false
+  },
+  "public_site_payloads": 86,
+  "all_84_original_routes_preserved": true
+}

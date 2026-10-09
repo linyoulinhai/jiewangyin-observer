@@ -17,8 +17,8 @@
     },
     {
       "path": "MULTIPLATFORM-GUIDE.txt",
-      "size": 37200,
-      "sha256": "1ac67ea115262f523b3e94d453120e061c642c78550e41cf9b0e1d72e696e0c2"
+      "size": 37973,
+      "sha256": "161559e335fb143230d1e2603a8c9faa53945acf14f75d54a039c072cb929084"
     },
     {
       "path": "NCT-LICENSE.txt",
@@ -278,82 +278,82 @@
     {
       "path": "packages/demo-001.zip",
       "size": 213290,
-      "sha256": "1610e1918ceaed89b0a83d65b021fdb1dbb544e03791ca5193030eff78588c15"
+      "sha256": "b62062835b6689df6b4709a04d58b1d857c026e58ec5b80067b67d282fdcea8d"
     },
     {
       "path": "packages/demo-002.zip",
       "size": 284726,
-      "sha256": "56787201d9485f9351194decae28d5fd5987a9dc77a98f36857a189707aba671"
+      "sha256": "39bc460e2e8fcfae40a6adeb47cfc3a7d058cfeb2c5e4c39c23bfcac894cd8f2"
     },
     {
       "path": "packages/demo-003.zip",
       "size": 76804,
-      "sha256": "ca3b45b9ace9e87df6cd4768fc45a73c38ae2a8db695f1b10b51baa6710ed8d1"
+      "sha256": "dec5fa6a89f43ddcea846e8c9201d875cdea84376d3d7d949ec04597e78539e8"
     },
     {
       "path": "packages/demo-004.zip",
       "size": 213252,
-      "sha256": "0088285d70d372369a0d05658303b477719d730647a1eba1bcc62ecbb5441995"
+      "sha256": "ec5956d3b33615ed2e44c2a81755f412358d7439c3d77c637b71ddc7c195ce1f"
     },
     {
       "path": "packages/demo-005.zip",
       "size": 76779,
-      "sha256": "e30a85f465b43b68fb62b8268ed62331f1733f4790be17abbc00aa4dbc51a643"
+      "sha256": "40eb6a8949b7a7228549439b0c9cdc973b19810468a05eb568018054d0a3e08b"
     },
     {
       "path": "packages/demo-006.zip",
       "size": 213304,
-      "sha256": "50db6d690e2d8cd20a660a80cd967ad7e11dc597da2db3517b4c9dfa66a9f917"
+      "sha256": "f916e445cb4e654f5fca925a468a775b7a1f82081ab383a63698ea5dcb32d6ca"
     },
     {
       "path": "packages/demo-007.zip",
       "size": 76771,
-      "sha256": "65e15d1987d721759b98453b88d2f963851753b3937214aa8e07668d8a1dd7c8"
+      "sha256": "58415e4bef6177159ee7a8a8ce134fab13dc87321ffbea1d99044714c95a93c5"
     },
     {
       "path": "packages/demo-008.zip",
       "size": 284754,
-      "sha256": "b8f708c23703d116281187218b7b1cf47aa14e83b09b74c6e9488957ed69f986"
+      "sha256": "91751e2022f5f2046e9551c3a689793d9bf6919ccb8a3f37d254d9b194cd60dd"
     },
     {
       "path": "packages/institution-demo-a.zip",
       "size": 497469,
-      "sha256": "9cc579d39da02f3c1afd642a1f3a0d93ceb4e85ca4b8e4f941223a7c8009a326"
+      "sha256": "87b861329d66e8f4ae563dc1fef23a5d3e27eac35ec56e6ed425f1e131c3cce5"
     },
     {
       "path": "packages/institution-demo-b.zip",
       "size": 77302,
-      "sha256": "0bcfdb650c854bfe153e5324daee31ae95935cc9f1cec9553b4d10d8bb41d599"
+      "sha256": "84defcae0bedc2ef3e50c6c665d9168e655da257410c8b73ceb73d46c5eb658a"
     },
     {
       "path": "packages/institution-demo-c.zip",
       "size": 76866,
-      "sha256": "1c523f0fafd692efe778bae8019367aa6489cdff4be2acfd55f196399a09fc26"
+      "sha256": "90a7db83b6bf9731af03d662dc4a5fa17901bbefd0b91740509fad7c7e563a42"
     },
     {
       "path": "packages/institution-demo-d.zip",
       "size": 76862,
-      "sha256": "dd2244aef649e28a4ba7b4c5670985854ca35bb808e8d12a5fb5be6ee54a0039"
+      "sha256": "17afd4cbb7619c244b6bd2ff47bf6c15775e07078e82e2e4b62bc10986c70e1b"
     },
     {
       "path": "packages/institution-demo-e.zip",
       "size": 284843,
-      "sha256": "1df7a5aadb8319fb98246903a9d683399dad31acee959b5bd3deb9922c68bae8"
+      "sha256": "bc1210af0e36ba1b3c4742f34934d1c9c9fc4eb23bfc0a0201a5a2c91fab42e6"
     },
     {
       "path": "packages/institution-demo-f.zip",
       "size": 213387,
-      "sha256": "428dcbedb37507f2b6a0ff151a8d6f64d157751af2e2c1c100b97be4be2bef9f"
+      "sha256": "c2126a62b245eb3d1bc30ff8e17ed9e655612c4a85c170dc19bdf0c9cc9bb2c0"
     },
     {
       "path": "packages/story-story-a.zip",
       "size": 497408,
-      "sha256": "72a3bb6ba6a820a16bd4ad6794be3e444630d28759b4edc3dc7d87320cc9781c"
+      "sha256": "9e308a399949162994e994de16ba84cf862497b2eb83c4f5fd5a51089ed8c00c"
     },
     {
       "path": "packages/story-story-b.zip",
       "size": 77223,
-      "sha256": "7b6941208d41749ad2e6e086e23309b48e6331de384febddae1567d1a4a1f73f"
+      "sha256": "6f1cd303fb91b16ea3e29842ec21752538d30214dbe5f5aa93b3311345b48111"
     },
     {
       "path": "public-data.json",
