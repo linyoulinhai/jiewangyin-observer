@@ -1,0 +1,30 @@
+{
+  "release": "v2026.10.09.4",
+  "channels": 84,
+  "display_groups": 8,
+  "original_channel_names_preserved": true,
+  "database_and_sources_first": true,
+  "video_display_stage": 8,
+  "doc_links_checked": true,
+  "deterministic_guide_generation": true,
+  "archives": {
+    "jiewangyin-deployment-guide-2026-10-09.4.zip": {
+      "files": 21,
+      "crc": true,
+      "sha256_payloads_verified": 20,
+      "inner_site_verified": 86
+    },
+    "jiewangyin-data-starter-2026-10-09.4.zip": {
+      "files": 26,
+      "crc": true,
+      "sha256_payloads_verified": 25
+    },
+    "jiewangyin-promotion-kit-2026-10-09.4.zip": {
+      "files": 37,
+      "crc": true,
+      "sha256_payloads_verified": 36,
+      "inner_site_verified": 86
+    }
+  },
+  "scope": "本轮发布文档、排序及打包验收；未改后端或原站部署，未新开服务/购买/实测国内网络。"
+}

@@ -6,6 +6,21 @@
 
 [查看网站](https://kanjian-archive-concept.chengbiliu3.chatgpt.site/) · [详细项目说明](docs/project-guide.md) · [下载与复制](docs/download-and-deploy.md) · [参与贡献](CONTRIBUTING.md) · [资料查找交接](docs/research-handoff.txt) · [原作者与致谢](ACKNOWLEDGEMENTS.md) · [各平台传播与保存](docs/multiplatform-distribution.md)
 
+## 项目提供者与来源
+
+感谢 **[FunctionSir及PanDefenseProject贡献者](https://github.com/FunctionSir/PanDefenseProject)**、**[goodpsychologistclaw及nct-archive贡献者](https://github.com/goodpsychologistclaw/nct-archive)** 提供公开目录基础，感谢 **[NO-CONVERSION-THERAPY](https://github.com/NO-CONVERSION-THERAPY)**、BornFreeFearlessinLove、2beTechnetium、Perity-ctrl等原作者提供可研究的相关项目。这里保留原作者署名与实际使用范围，不将他们写成已经加入本站的合作方。素材作者、工具贡献者与全部来源见[致谢页](ACKNOWLEDGEMENTS.md)。
+
+## 主要资料库与数据库
+
+- **NCT 全国矫正机构资料档案 / nct-archive、PanDefenseProject**：公开目录的上游资料库，原作者与许可分别保留。
+- **本站机构资料库 / SQLite**：`机构资料库.sqlite3`在本地保存原始来源，未公开；私有仓库`jiewangyin-observer-private`用`records.json`整理审核。
+- **公开来源目录**：`source-catalog.json/csv`，1251条待核对记录，下载后可复制和重建；静态展示无需新开在线数据库。
+- **互助与收件数据库 / D1**：代码绑定名`DB`，本机预览文件`.preview/community.sqlite3`；生产数据库由部署者另建。附件`BUCKET`属于存储，不是数据库。
+
+## 部署与发布顺序
+
+已有可用国内网站空间 → 国内静态部署候选（EdgeOne、CloudBase、ESA）→ 国内文档/网盘入口 → 跨境与特殊网络条件备用 → 视频存储、转码和渲染层。沿用国内可达、免费、简单、可复制的优先级；[具体部署条件与官方来源](docs/deployment-options.md)已重新核对，临时预览与长期宣传入口分别说明。
+
 ## 拿去宣传与保存
 
 先按[国内手机主用流程](docs/domestic-primary.md)拿到、另存、转交一份公开包。普通读者不必理解GitHub或进入私有库；[跨境/特殊网络条件备用](docs/overseas-backup.md)单独保留。
@@ -20,13 +35,9 @@
 
 账号、网盘上传、分享设置、社交发帖和评论由维护者/自愿参与者自己操作。本项目不自动投放；[下一步清单](docs/promotion-kit/接下来由你完成.txt)区分准备完成与待实际测试的工作。原有84项备选路线继续保留。
 
-## 项目提供者与来源
-
-感谢 **[FunctionSir及PanDefenseProject贡献者](https://github.com/FunctionSir/PanDefenseProject)**、**[goodpsychologistclaw及nct-archive贡献者](https://github.com/goodpsychologistclaw/nct-archive)** 提供公开目录基础，感谢 **[NO-CONVERSION-THERAPY](https://github.com/NO-CONVERSION-THERAPY)**、BornFreeFearlessinLove、2beTechnetium、Perity-ctrl等原作者提供可研究的相关项目。这里保留原作者署名与实际使用范围，不将他们写成已经加入本站的合作方。素材作者、工具贡献者与全部来源见[致谢页](ACKNOWLEDGEMENTS.md)。
-
 ## 各个平台怎样传播、保存
 
-[多平台指南](docs/multiplatform-distribution.md)现有**84项平台与形式、9组路线**，包含国内社交平台、在线文档、网盘、源码镜像、Wiki/论坛、静态托管、境外备用与手机离线接力。已上线与候选分开，不承诺所有方案永久免费或国内都可达。
+[多平台指南](docs/multiplatform-distribution.md)现有**84项平台与形式、原9组分类按8个执行分组展示**，包含国内社交平台、在线文档、网盘、源码镜像、Wiki/论坛、静态托管、境外备用与手机离线接力。已上线与候选分开，不承诺所有方案永久免费或国内都可达。
 
 微信/QQ可转交小ZIP和导读；微博、贴吧、知乎、小红书可发公开图文导读；B站、抖音、快手、视频号展示授权播放版；腾讯文档/飞书等放可查目录；蓝奏、123、移动/天翼等试公开包下载。GitHub及境外存储作为维护端和备用，不是国内用户的唯一入口。各项操作、公开范围、免费条件与下载测试写在指南中，保留现有备选。
 

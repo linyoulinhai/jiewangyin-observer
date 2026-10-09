@@ -1,4 +1,8 @@
-# 下载、复制与部署
+# 资料库、下载、复制与部署
+
+先看[主要资料库名称、数据库用途与部署优先级](deployment-options.md)：已有可用国内空间、国内静态候选、国内目录/下载、跨境备用，最后视频与渲染。原始私人SQLite不随部署包发布，静态公开目录无需新开数据库。
+
+**现在可复制的资料源**：公开`source-catalog.json/csv`；**维护端私有索引**：`jiewangyin-observer-private/records.json`；**完整互助后台数据库**：D1绑定`DB`，本机`.preview/community.sqlite3`。详见部署核对页。
 
 ## 各平台与普通人接力
 
@@ -8,7 +12,7 @@
 
 ## 只想保存或转发
 
-在Releases下载 `jiewangyin-observer-public-site-2026-10-09.zip`，解压后查看 `README.txt` 与 `index.html`。浏览器本地文件策略和手机文件预览器存在差异；独立 `tools/source-directory.html`、CSV与JSON是备用阅读办法。
+在[最新Releases](https://github.com/linyoulinhai/jiewangyin-observer/releases/latest)下载标注“公开网站包”的ZIP，解压后查看 `README.txt` 与 `index.html`。浏览器本地文件策略和手机文件预览器存在差异；独立 `tools/source-directory.html`、CSV与JSON是备用阅读办法。
 
 上传公开包内文件到静态托管根目录即可展示档案。保留许可证、来源、演示标记和更正入口。静态副本不包含线上互助、服务器收件和审核服务，这些入口不能因为页面存在便当成已可用。
 

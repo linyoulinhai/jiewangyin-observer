@@ -17,6 +17,7 @@ names=['README.md','先读我.txt','index.html','评论区与短介绍.txt','图
        'cards/02-sources.svg','cards/03-save-and-share.png','cards/03-save-and-share.svg']
 files={name:base/name for name in names}
 files.update({
+ '接力流程/资料库与部署顺序.txt':ROOT/'docs/deployment-options.md',
  '接力流程/国内主用.txt':ROOT/'docs/domestic-primary.md',
  '接力流程/跨境与特殊网络条件备用.txt':ROOT/'docs/overseas-backup.md',
  '接力流程/公私两库与资料源复制.txt':ROOT/'docs/replicable-workflow.md',

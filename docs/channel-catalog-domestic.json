@@ -3,191 +3,46 @@
   "notice": "这是渠道与形式清单，不是已建立平台数量或独立备份数量。未标已建立者均未创建、未发布、未发消息。宣传/技术路径为项目建议；官方规则核对程度和账号实测限制写在正文。",
   "channels": [
     {
-      "group": "国内传播",
-      "name": "微信好友与群",
-      "url": "https://weixin.qq.com/",
-      "action": "把短介绍、入口文字和小型资料ZIP一起发送；接收者另存手机文件并转交，不只收藏聊天消息。",
-      "limit": "公开图片用传播副本；聊天存储可能过期，原始视频和个人资料不放公开群。",
+      "group": "网站与文件托管",
+      "name": "EdgeOne Makers / Pages",
+      "url": "https://pages.edgeone.ai/zh/document/direct-upload",
+      "action": "候选直接上传公开ZIP或静态文件夹，index.html必须在根目录；记录真实部署URL和负责人。",
+      "limit": "官方直接上传最多20000文件、单文件25MB；默认项目/部署域名在大陆须使用3小时有效预览链接，自定义域名与区域条件见部署核对。预览不作为长期宣传入口；免费资格与真机访问未验收。",
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-065",
+      "display_stage": 1,
+      "display_order": 2
     },
     {
-      "group": "国内传播",
-      "name": "微信公众号",
-      "url": "https://mp.weixin.qq.com/",
-      "action": "以机构查找方法、资料核对方法和项目更新为系列文章；文末保留来源、日期、作者致谢、复制办法和更正入口。",
-      "limit": "图文外链与文件分发能力按账号实际权限验证；保留同内容TXT/Markdown，避免文章成为唯一副本。",
+      "group": "网站与文件托管",
+      "name": "CloudBase静态托管",
+      "url": "https://docs.cloudbase.net/hosting/web-hosting-static",
+      "action": "已有可用环境时上传公开展示文件，后台服务另设计，登记账号维护者与到期条件。",
+      "limit": "官方支持现成静态文件/文件夹上传；默认域名用于测试且存在频率限制。正式入口、环境到期、免费资格和存储/流量计费须按账号核验，本次未开通或计费。",
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-066",
+      "display_stage": 1,
+      "display_order": 3
     },
     {
-      "group": "国内传播",
-      "name": "微信视频号",
-      "url": "https://channels.weixin.qq.com/",
-      "action": "发布手机使用演示或经过授权的短片，配机构编号、出处和项目名称；完整来源在配套说明页。",
-      "limit": "视频会有平台处理；公开播放版之外另存原件，外部链接或二维码是否可用需发帖前验证。",
+      "group": "网站与文件托管",
+      "name": "阿里云ESA",
+      "url": "https://help.aliyun.com/zh/edge-security-acceleration/esa/product-overview/free-plan",
+      "action": "保留边缘托管与加速候选；在实际控制台确认可用托管产品和免费额度后再做副本。",
+      "limit": "已核对函数和Pages、国际站Entrance活动及中国站域名路线：国际站免费默认不含内地加速；中国站特定免费套餐与域名注册支付步骤有关。资格、域名和区域分别确认，未参加活动或购买。",
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
-    },
-    {
-      "group": "国内传播",
-      "name": "QQ好友与QQ群",
-      "url": "https://im.qq.com/",
-      "action": "发送ZIP与TXT导读，利用可用的群文件保存公开副本；公布版本号，安排一名维护者定期更新。",
-      "limit": "群文件、账号容量和文件留存规则由账号确认；群成员转载也应保留作者和许可。",
-      "status": "候选，未建立本站入口",
-      "access_tier": "domestic-candidate",
-      "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
-    },
-    {
-      "group": "国内传播",
-      "name": "微博",
-      "url": "https://weibo.com/",
-      "action": "用短介绍或图文卡片说明一项查找/保存功能，提供允许的项目入口；长说明放配套文档。",
-      "limit": "每次保留可复制文字、原图和发帖链接；评论只作线索，发布前核对外链实际可点击性。",
-      "status": "候选，未建立本站入口",
-      "access_tier": "domestic-candidate",
-      "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
-    },
-    {
-      "group": "国内传播",
-      "name": "百度贴吧",
-      "url": "https://tieba.baidu.com/",
-      "action": "选择主题相关贴吧，先阅读吧规；发布清晰导读和公开资料使用方法，有管理员允许时维护一个汇总帖。",
-      "limit": "不假定可置顶或可发所有链接；保存帖子文字和来源，不反复刷屏。",
-      "status": "候选，未建立本站入口",
-      "access_tier": "domestic-candidate",
-      "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
-    },
-    {
-      "group": "国内传播",
-      "name": "哔哩哔哩",
-      "url": "https://www.bilibili.com/",
-      "action": "制作手机使用演示、机构资料如何核对或经授权经历短片；简介和配套图文保留来源编号与版本日期。",
-      "limit": "不能把转码播放文件当作原件备份；视频、评论和回复的授权分别处理。",
-      "status": "候选，未建立本站入口",
-      "access_tier": "domestic-candidate",
-      "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
-    },
-    {
-      "group": "国内传播",
-      "name": "抖音",
-      "url": "https://www.douyin.com/",
-      "action": "用简短视频说明项目用途与一项具体操作，准备同内容图文/文字导读；按账号可用功能放项目说明。",
-      "limit": "外链、二维码与评论引导是否允许需验证；不通过套壳或轮换短链绕过限制，原件另存。",
-      "status": "候选，未建立本站入口",
-      "access_tier": "domestic-candidate",
-      "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
-    },
-    {
-      "group": "国内传播",
-      "name": "快手",
-      "url": "https://www.kuaishou.com/",
-      "action": "同抖音路线，以手机操作和有出处的资料整理内容为主，保留可复制摘要。",
-      "limit": "平台播放副本用于传播，原视频另存；只发布已确认可以公开的素材。",
-      "status": "候选，未建立本站入口",
-      "access_tier": "domestic-candidate",
-      "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
-    },
-    {
-      "group": "国内传播",
-      "name": "小红书",
-      "url": "https://www.xiaohongshu.com/",
-      "action": "发布图文教程：如何搜索机构、如何保留来源、如何提交/下载；每张图标明机构编号或操作步骤。",
-      "limit": "不承诺外链可跳转；提供可搜索的项目名称和可复制短文，来源姓名与个人经历先确认公开范围。",
-      "status": "候选，未建立本站入口",
-      "access_tier": "domestic-candidate",
-      "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
-    },
-    {
-      "group": "国内传播",
-      "name": "知乎",
-      "url": "https://www.zhihu.com/",
-      "action": "围绕公开资料查询和保存方法写回答/文章，附具体出处与项目说明；项目更新保留日期。",
-      "limit": "不将未经核对的目录变成确定指控；保存原创正文和图片，不依赖收藏夹作为备份。",
-      "status": "候选，未建立本站入口",
-      "access_tier": "domestic-candidate",
-      "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
-    },
-    {
-      "group": "国内传播",
-      "name": "豆瓣",
-      "url": "https://www.douban.com/",
-      "action": "在相关小组管理员允许的情况下放资料查阅导读和互助资源。",
-      "limit": "小组有独立规则；未获准不批量投递，正文与文件副本在其他地方保存。",
-      "status": "候选，未建立本站入口",
-      "access_tier": "domestic-candidate",
-      "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
-    },
-    {
-      "group": "国内传播",
-      "name": "今日头条",
-      "url": "https://www.toutiao.com/",
-      "action": "发布完整图文教程与项目更新，保留原稿，视频同步使用已授权播放副本。",
-      "limit": "账号发布条件与外链权限需验证，平台文章不是附件原件库。",
-      "status": "候选，未建立本站入口",
-      "access_tier": "domestic-candidate",
-      "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
-    },
-    {
-      "group": "国内传播",
-      "name": "CSDN / 掘金",
-      "url": "https://juejin.cn/",
-      "action": "面向开发者介绍如何复制静态站、运行源码、参与手机工具改进；给仓库与许可证。",
-      "limit": "适合技术协作入口，普通用户导读另放手机易读渠道，不将技术账号当成用户唯一准入。",
-      "status": "候选，未建立本站入口",
-      "access_tier": "domestic-candidate",
-      "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
-    },
-    {
-      "group": "源码、资料发行与归档",
-      "name": "Gitee",
-      "url": "https://gitee.com/",
-      "action": "准备完整源码和许可后，建立公开代码/文档镜像，允许浏览与下载ZIP。",
-      "limit": "官网曾公告Pages暂停，不按旧教程承诺能直接托管网站；本轮未确认恢复，代码镜像与网页托管分别验证。",
-      "status": "候选，未建立本站入口",
-      "access_tier": "domestic-candidate",
-      "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
-    },
-    {
-      "group": "源码、资料发行与归档",
-      "name": "GitCode",
-      "url": "https://gitcode.com/",
-      "action": "作为国内代码与中文说明镜像候选；上传源码和公开目录，登记上游及更正入口。",
-      "limit": "导入仓库与下载权限、容量、附件发行能力须按实际账号核验，不写成已创建镜像。",
-      "status": "候选，未建立本站入口",
-      "access_tier": "domestic-candidate",
-      "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
-    },
-    {
-      "group": "源码、资料发行与归档",
-      "name": "CNB",
-      "url": "https://cnb.cool/",
-      "action": "作为国内代码与构建协作候选，保存公开源码、文档和版本清单。",
-      "limit": "实际免费资格、仓库公开与下载、文件额度需确认，不能因为账号可注册就视为全年免费主站。",
-      "status": "候选，未建立本站入口",
-      "access_tier": "domestic-candidate",
-      "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-074",
+      "display_stage": 1,
+      "display_order": 4
     },
     {
       "group": "国内文档与收件",
@@ -198,7 +53,10 @@
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-030",
+      "display_stage": 2,
+      "display_order": 5
     },
     {
       "group": "国内文档与收件",
@@ -209,7 +67,10 @@
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-031",
+      "display_stage": 2,
+      "display_order": 6
     },
     {
       "group": "国内文档与收件",
@@ -220,7 +81,10 @@
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-032",
+      "display_stage": 2,
+      "display_order": 7
     },
     {
       "group": "国内文档与收件",
@@ -231,7 +95,10 @@
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-033",
+      "display_stage": 2,
+      "display_order": 8
     },
     {
       "group": "国内文档与收件",
@@ -242,7 +109,10 @@
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-034",
+      "display_stage": 2,
+      "display_order": 9
     },
     {
       "group": "国内文档与收件",
@@ -253,7 +123,10 @@
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-035",
+      "display_stage": 2,
+      "display_order": 10
     },
     {
       "group": "国内文档与收件",
@@ -264,7 +137,10 @@
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-036",
+      "display_stage": 2,
+      "display_order": 11
     },
     {
       "group": "国内文件保存与下载",
@@ -275,7 +151,10 @@
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-045",
+      "display_stage": 3,
+      "display_order": 12
     },
     {
       "group": "国内文件保存与下载",
@@ -286,40 +165,10 @@
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
-    },
-    {
-      "group": "国内文件保存与下载",
-      "name": "百度网盘",
-      "url": "https://pan.baidu.com/",
-      "action": "用已有免费空间保存公开包和已授权媒体，再创建分享目录；接收者自行下载/转存。",
-      "limit": "本轮未验证实际免费容量、分享/转存权限、接收者费用与下载速度；只有从无会员接收端完整下载并校验后，才标为可用免费通道。",
-      "status": "候选，未建立本站入口",
-      "access_tier": "domestic-candidate",
-      "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
-    },
-    {
-      "group": "国内文件保存与下载",
-      "name": "夸克网盘",
-      "url": "https://pan.quark.cn/",
-      "action": "保存目录与公开媒体包，分享前测试从手机浏览器的完整下载步骤。",
-      "limit": "本轮未验证实际免费容量、分享/转存权限、接收者费用与下载速度；只有从无会员接收端完整下载并校验后，才标为可用免费通道。",
-      "status": "候选，未建立本站入口",
-      "access_tier": "domestic-candidate",
-      "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
-    },
-    {
-      "group": "国内文件保存与下载",
-      "name": "阿里云盘",
-      "url": "https://www.aliyundrive.com/",
-      "action": "分公开资料与私人备份目录；公开目录分享，原件只给授权维护者访问。",
-      "limit": "本轮未验证实际免费容量、分享/转存权限、接收者费用与下载速度；只有从无会员接收端完整下载并校验后，才标为可用免费通道。",
-      "status": "候选，未建立本站入口",
-      "access_tier": "domestic-candidate",
-      "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-046",
+      "display_stage": 3,
+      "display_order": 13
     },
     {
       "group": "国内文件保存与下载",
@@ -330,7 +179,10 @@
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-050",
+      "display_stage": 3,
+      "display_order": 14
     },
     {
       "group": "国内文件保存与下载",
@@ -341,7 +193,52 @@
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-051",
+      "display_stage": 3,
+      "display_order": 15
+    },
+    {
+      "group": "国内文件保存与下载",
+      "name": "百度网盘",
+      "url": "https://pan.baidu.com/",
+      "action": "用已有免费空间保存公开包和已授权媒体，再创建分享目录；接收者自行下载/转存。",
+      "limit": "本轮未验证实际免费容量、分享/转存权限、接收者费用与下载速度；只有从无会员接收端完整下载并校验后，才标为可用免费通道。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "domestic-candidate",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-047",
+      "display_stage": 3,
+      "display_order": 16
+    },
+    {
+      "group": "国内文件保存与下载",
+      "name": "夸克网盘",
+      "url": "https://pan.quark.cn/",
+      "action": "保存目录与公开媒体包，分享前测试从手机浏览器的完整下载步骤。",
+      "limit": "本轮未验证实际免费容量、分享/转存权限、接收者费用与下载速度；只有从无会员接收端完整下载并校验后，才标为可用免费通道。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "domestic-candidate",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-048",
+      "display_stage": 3,
+      "display_order": 17
+    },
+    {
+      "group": "国内文件保存与下载",
+      "name": "阿里云盘",
+      "url": "https://www.aliyundrive.com/",
+      "action": "分公开资料与私人备份目录；公开目录分享，原件只给授权维护者访问。",
+      "limit": "本轮未验证实际免费容量、分享/转存权限、接收者费用与下载速度；只有从无会员接收端完整下载并校验后，才标为可用免费通道。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "domestic-candidate",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-049",
+      "display_stage": 3,
+      "display_order": 18
     },
     {
       "group": "国内文件保存与下载",
@@ -352,7 +249,10 @@
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-052",
+      "display_stage": 3,
+      "display_order": 19
     },
     {
       "group": "国内文件保存与下载",
@@ -363,7 +263,10 @@
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-053",
+      "display_stage": 3,
+      "display_order": 20
     },
     {
       "group": "国内文件保存与下载",
@@ -374,7 +277,10 @@
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-054",
+      "display_stage": 3,
+      "display_order": 21
     },
     {
       "group": "国内文件保存与下载",
@@ -385,7 +291,10 @@
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-055",
+      "display_stage": 3,
+      "display_order": 22
     },
     {
       "group": "国内文件保存与下载",
@@ -396,7 +305,10 @@
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-056",
+      "display_stage": 3,
+      "display_order": 23
     },
     {
       "group": "国内文件保存与下载",
@@ -407,40 +319,52 @@
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-057",
+      "display_stage": 3,
+      "display_order": 24
     },
     {
-      "group": "网站与文件托管",
-      "name": "EdgeOne Makers / Pages",
-      "url": "https://pages.edgeone.ai/document/direct-upload",
-      "action": "候选直接上传公开ZIP或静态文件夹，index.html必须在根目录；记录真实部署URL和负责人。",
-      "limit": "官网当前直接上传上限20000文件、单文件25MB；具体免费套餐、区域、域名期限和中国大陆加速开通条件需控制台核验，不能从厂商归属推定全国可达。",
+      "group": "源码、资料发行与归档",
+      "name": "Gitee",
+      "url": "https://gitee.com/",
+      "action": "准备完整源码和许可后，建立公开代码/文档镜像，允许浏览与下载ZIP。",
+      "limit": "官网曾公告Pages暂停，不按旧教程承诺能直接托管网站；本轮未确认恢复，代码镜像与网页托管分别验证。",
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-024",
+      "display_stage": 3,
+      "display_order": 25
     },
     {
-      "group": "网站与文件托管",
-      "name": "CloudBase静态托管",
-      "url": "https://docs.cloudbase.net/hosting/web-hosting-static",
-      "action": "已有可用环境时上传公开展示文件，后台服务另设计，登记账号维护者与到期条件。",
-      "limit": "本轮文档读取超时；免费体验、续期、默认域名与正式托管条件未确认，保留条件候选。",
+      "group": "源码、资料发行与归档",
+      "name": "GitCode",
+      "url": "https://gitcode.com/",
+      "action": "作为国内代码与中文说明镜像候选；上传源码和公开目录，登记上游及更正入口。",
+      "limit": "导入仓库与下载权限、容量、附件发行能力须按实际账号核验，不写成已创建镜像。",
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-025",
+      "display_stage": 3,
+      "display_order": 26
     },
     {
-      "group": "网站与文件托管",
-      "name": "阿里云ESA",
-      "url": "https://help.aliyun.com/zh/edge-security-acceleration/esa/product-overview/free-plan",
-      "action": "保留边缘托管与加速候选；在实际控制台确认可用托管产品和免费额度后再做副本。",
-      "limit": "本轮正文未能完整读取，免费条件和国内发布要求未核实；加速套餐本身不等于完整免费站点托管。",
+      "group": "源码、资料发行与归档",
+      "name": "CNB",
+      "url": "https://cnb.cool/",
+      "action": "作为国内代码与构建协作候选，保存公开源码、文档和版本清单。",
+      "limit": "实际免费资格、仓库公开与下载、文件额度需确认，不能因为账号可注册就视为全年免费主站。",
       "status": "候选，未建立本站入口",
       "access_tier": "domestic-candidate",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-026",
+      "display_stage": 3,
+      "display_order": 27
     },
     {
       "group": "手机、离线与维护者接力",
@@ -451,7 +375,10 @@
       "status": "候选，未建立本站入口",
       "access_tier": "offline-primary",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-077",
+      "display_stage": 4,
+      "display_order": 28
     },
     {
       "group": "手机、离线与维护者接力",
@@ -462,7 +389,10 @@
       "status": "候选，未建立本站入口",
       "access_tier": "offline-primary",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-078",
+      "display_stage": 4,
+      "display_order": 29
     },
     {
       "group": "手机、离线与维护者接力",
@@ -473,7 +403,206 @@
       "status": "候选，未建立本站入口",
       "access_tier": "offline-primary",
       "domestic_mobile_test": "not-tested",
-      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。"
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-079",
+      "display_stage": 4,
+      "display_order": 30
+    },
+    {
+      "group": "国内传播",
+      "name": "微信好友与群",
+      "url": "https://weixin.qq.com/",
+      "action": "把短介绍、入口文字和小型资料ZIP一起发送；接收者另存手机文件并转交，不只收藏聊天消息。",
+      "limit": "公开图片用传播副本；聊天存储可能过期，原始视频和个人资料不放公开群。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "domestic-candidate",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-001",
+      "display_stage": 5,
+      "display_order": 35
+    },
+    {
+      "group": "国内传播",
+      "name": "QQ好友与QQ群",
+      "url": "https://im.qq.com/",
+      "action": "发送ZIP与TXT导读，利用可用的群文件保存公开副本；公布版本号，安排一名维护者定期更新。",
+      "limit": "群文件、账号容量和文件留存规则由账号确认；群成员转载也应保留作者和许可。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "domestic-candidate",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-004",
+      "display_stage": 5,
+      "display_order": 36
+    },
+    {
+      "group": "国内传播",
+      "name": "微信公众号",
+      "url": "https://mp.weixin.qq.com/",
+      "action": "以机构查找方法、资料核对方法和项目更新为系列文章；文末保留来源、日期、作者致谢、复制办法和更正入口。",
+      "limit": "图文外链与文件分发能力按账号实际权限验证；保留同内容TXT/Markdown，避免文章成为唯一副本。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "domestic-candidate",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-002",
+      "display_stage": 5,
+      "display_order": 37
+    },
+    {
+      "group": "国内传播",
+      "name": "微博",
+      "url": "https://weibo.com/",
+      "action": "用短介绍或图文卡片说明一项查找/保存功能，提供允许的项目入口；长说明放配套文档。",
+      "limit": "每次保留可复制文字、原图和发帖链接；评论只作线索，发布前核对外链实际可点击性。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "domestic-candidate",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-005",
+      "display_stage": 5,
+      "display_order": 38
+    },
+    {
+      "group": "国内传播",
+      "name": "百度贴吧",
+      "url": "https://tieba.baidu.com/",
+      "action": "选择主题相关贴吧，先阅读吧规；发布清晰导读和公开资料使用方法，有管理员允许时维护一个汇总帖。",
+      "limit": "不假定可置顶或可发所有链接；保存帖子文字和来源，不反复刷屏。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "domestic-candidate",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-006",
+      "display_stage": 5,
+      "display_order": 39
+    },
+    {
+      "group": "国内传播",
+      "name": "知乎",
+      "url": "https://www.zhihu.com/",
+      "action": "围绕公开资料查询和保存方法写回答/文章，附具体出处与项目说明；项目更新保留日期。",
+      "limit": "不将未经核对的目录变成确定指控；保存原创正文和图片，不依赖收藏夹作为备份。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "domestic-candidate",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-011",
+      "display_stage": 5,
+      "display_order": 40
+    },
+    {
+      "group": "国内传播",
+      "name": "小红书",
+      "url": "https://www.xiaohongshu.com/",
+      "action": "发布图文教程：如何搜索机构、如何保留来源、如何提交/下载；每张图标明机构编号或操作步骤。",
+      "limit": "不承诺外链可跳转；提供可搜索的项目名称和可复制短文，来源姓名与个人经历先确认公开范围。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "domestic-candidate",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-010",
+      "display_stage": 5,
+      "display_order": 41
+    },
+    {
+      "group": "国内传播",
+      "name": "豆瓣",
+      "url": "https://www.douban.com/",
+      "action": "在相关小组管理员允许的情况下放资料查阅导读和互助资源。",
+      "limit": "小组有独立规则；未获准不批量投递，正文与文件副本在其他地方保存。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "domestic-candidate",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-012",
+      "display_stage": 5,
+      "display_order": 42
+    },
+    {
+      "group": "国内传播",
+      "name": "今日头条",
+      "url": "https://www.toutiao.com/",
+      "action": "发布完整图文教程与项目更新，保留原稿，视频同步使用已授权播放副本。",
+      "limit": "账号发布条件与外链权限需验证，平台文章不是附件原件库。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "domestic-candidate",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-013",
+      "display_stage": 5,
+      "display_order": 43
+    },
+    {
+      "group": "国内传播",
+      "name": "CSDN / 掘金",
+      "url": "https://juejin.cn/",
+      "action": "面向开发者介绍如何复制静态站、运行源码、参与手机工具改进；给仓库与许可证。",
+      "limit": "适合技术协作入口，普通用户导读另放手机易读渠道，不将技术账号当成用户唯一准入。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "domestic-candidate",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-014",
+      "display_stage": 5,
+      "display_order": 44
+    },
+    {
+      "group": "国内传播",
+      "name": "微信视频号",
+      "url": "https://channels.weixin.qq.com/",
+      "action": "发布手机使用演示或经过授权的短片，配机构编号、出处和项目名称；完整来源在配套说明页。",
+      "limit": "视频会有平台处理；公开播放版之外另存原件，外部链接或二维码是否可用需发帖前验证。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "domestic-candidate",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-003",
+      "display_stage": 8,
+      "display_order": 78
+    },
+    {
+      "group": "国内传播",
+      "name": "哔哩哔哩",
+      "url": "https://www.bilibili.com/",
+      "action": "制作手机使用演示、机构资料如何核对或经授权经历短片；简介和配套图文保留来源编号与版本日期。",
+      "limit": "不能把转码播放文件当作原件备份；视频、评论和回复的授权分别处理。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "domestic-candidate",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-007",
+      "display_stage": 8,
+      "display_order": 79
+    },
+    {
+      "group": "国内传播",
+      "name": "抖音",
+      "url": "https://www.douyin.com/",
+      "action": "用简短视频说明项目用途与一项具体操作，准备同内容图文/文字导读；按账号可用功能放项目说明。",
+      "limit": "外链、二维码与评论引导是否允许需验证；不通过套壳或轮换短链绕过限制，原件另存。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "domestic-candidate",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-008",
+      "display_stage": 8,
+      "display_order": 80
+    },
+    {
+      "group": "国内传播",
+      "name": "快手",
+      "url": "https://www.kuaishou.com/",
+      "action": "同抖音路线，以手机操作和有出处的资料整理内容为主，保留可复制摘要。",
+      "limit": "平台播放副本用于传播，原视频另存；只发布已确认可以公开的素材。",
+      "status": "候选，未建立本站入口",
+      "access_tier": "domestic-candidate",
+      "domestic_mobile_test": "not-tested",
+      "access_note": "使用分层，不是必须VPN/保证直连结论；需按地区、网络和账号实测。",
+      "channel_id": "channel-009",
+      "display_stage": 8,
+      "display_order": 81
     }
   ],
   "access_tiers": {
@@ -481,5 +610,6 @@
     "offline-primary": "文件另存/独立维护者/局域网交接，安装来源另测",
     "cross-border-backup": "跨境或特殊网络条件备用；原Sites和GitHub已建立但国内可达性待测",
     "deployment-dependent": "开源工具/混合服务取决于部署地点和实际节点"
-  }
+  },
+  "display_order_notice": "先资料库名称与来源，再国内部署、国内保存/接力、传播、跨境备用，最后视频与渲染。channel_id不随排序改变。"
 }

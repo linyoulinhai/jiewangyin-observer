@@ -16,6 +16,7 @@ if output.is_relative_to(ROOT) or output.exists():
 paths = ['scripts/release-data.py', 'LICENSE', 'ACKNOWLEDGEMENTS.md',
          'docs/project-providers.json', 'docs/replicable-workflow.md', 'docs/domestic-primary.md',
          'docs/overseas-backup.md', 'docs/channel-catalog.json',
+         'docs/deployment-options.md',
          'docs/channel-catalog-domestic.json', 'docs/channel-catalog-backup.json',
          'docs/channel-catalog-conditional.json', 'docs/private-index-example.json',
          'dist/source-catalog.json', 'dist/source-catalog.csv', 'dist/source-catalog.js',
@@ -47,7 +48,7 @@ docs有国内主用、跨境备用和全流程说明，旁边同名TXT方便手�
 项目：https://github.com/linyoulinhai/jiewangyin-observer
 原站：https://kanjian-archive-concept.chengbiliu3.chatgpt.site/
 '''.encode()
-for name in ['replicable-workflow', 'domestic-primary', 'overseas-backup']:
+for name in ['deployment-options', 'replicable-workflow', 'domestic-primary', 'overseas-backup']:
     payload[f'docs/{name}.txt'] = payload[f'docs/{name}.md']
 payload['SHA256SUMS.txt'] = ''.join(hashlib.sha256(v).hexdigest() + '  ' + k + '\n'
                                   for k, v in sorted(payload.items())).encode()

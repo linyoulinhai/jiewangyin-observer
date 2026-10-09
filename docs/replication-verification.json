@@ -23,5 +23,7 @@
     "private_media_restored": false
   },
   "public_site_payloads": 86,
-  "all_84_original_routes_preserved": true
+  "all_84_original_routes_preserved": true,
+  "verified_release": "v2026.10.09.3",
+  "notice": "此前资料源重建与公开边界验收记录；后续发布排序与重新打包另记，不冒充本轮重跑。"
 }
