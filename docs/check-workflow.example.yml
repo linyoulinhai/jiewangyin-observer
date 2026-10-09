@@ -1,0 +1,24 @@
+name: Check project
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - run: npm test
+      - run: node scripts/check-concept.cjs
+      - run: python3 scripts/package-public.py
+      - run: npm run build
+      - run: node tools/手机媒体分包工具/tests/core.test.cjs
+      - run: python3 -m unittest -v
+        working-directory: tools/线索收集工具

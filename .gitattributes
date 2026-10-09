@@ -1,0 +1,8 @@
+* text=auto
+*.js text eol=lf
+*.mjs text eol=lf
+*.py text eol=lf
+*.sh text eol=lf
+
+# Public file hashes cover exact original CSV bytes.
+dist/source-catalog.csv -text

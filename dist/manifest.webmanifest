@@ -1,0 +1,11 @@
+{
+  "name": "戒网瘾机构观察 · 来源档案与互助",
+  "short_name": "戒网瘾观察",
+  "lang": "zh-CN",
+  "start_url": "/#home",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#165ad5",
+  "icons": [{"src": "/assets/brand.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}]
+}

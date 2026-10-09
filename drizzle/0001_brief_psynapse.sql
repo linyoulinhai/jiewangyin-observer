@@ -1,0 +1,1 @@
+ALTER TABLE `attachments` ADD `consent_rules` text DEFAULT '' NOT NULL;

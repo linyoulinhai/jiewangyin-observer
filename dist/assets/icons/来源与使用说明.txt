@@ -1,0 +1,5 @@
+图标：Lucide，lucide-static 1.53.0
+官方：https://lucide.dev/
+许可：https://lucide.dev/license
+保留完整上游许可于 LICENSE.txt。图标采用文字配合的用途标记，不表示身份核验或真实性背书。
+图标随整站公开包保存，无需访问外部图标服务。

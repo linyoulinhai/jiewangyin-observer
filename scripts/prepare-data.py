@@ -1,0 +1,15 @@
+import json,pathlib
+p=pathlib.Path(__file__).resolve().parents[1]/'dist'
+inst=[('demo-a','A','示例教育中心','山东','济南',['demo-002','demo-004'],['story-a']),('demo-b','B','示例成长学校','河南','郑州',['demo-003'],['story-b']),('demo-c','C','示例训练中心','四川','成都',['demo-005'],[]),('demo-d','D','示例辅导学校','山东','青岛',['demo-007'],[]),('demo-e','E','示例教育基地','山东','临沂',['demo-008'],[]),('demo-f','F','示例学习中心','广东','广州',['demo-006'],[])]
+institutions=[dict(id=id,name='示例机构 '+letter,alias=alias,region=region,city=city,materials=materials,stories=stories,summary='把公开资料、场地影像与经历记录放在一起，分别保留出处与背景。') for id,letter,alias,region,city,materials,stories in inst]
+rows=[('demo-001','怎样把一份影像完整留下？',None,'全国','视频','dormitory','保留影像，也保留说明、来源与版本。'),('demo-002','公开资料与介绍','demo-a','山东','图片','campus','机构介绍与公开材料的整理入口。'),('demo-003','按时间整理一段经历','demo-b','河南','图文','documents','写下能够确认的部分，也注明尚不确定的细节。'),('demo-004','生活空间影像','demo-a','山东','视频','dormitory','影像旁边保留背景与来源说明。'),('demo-005','资料更新与更正记录','demo-c','四川','图文','documents','固定编号与版本帮助副本找到更新。'),('demo-006','一份影像与它的说明','demo-f','广东','视频','dormitory','让第一次打开的人也能理解正在看什么。'),('demo-007','纸面资料的来源整理','demo-d','山东','图片','documents','图片与文字说明作为同一份资料保存。'),('demo-008','待补充资料的档案入口','demo-e','山东','图片','campus','资料缺少的部分可以继续补充。')]
+materials=[]
+for id,title,institution,region,kind,image,summary in rows:
+ body=['此条目为虚构演示，图片由 AI 生成，不是该机构的真实照片、公开文件或事实证据。','正式材料将分别标明原始来源、取得时间与公开范围。材料不足时保留线索和不确定性，不据此判断违法与否。']
+ if kind=='视频':body[0]='这是一段由 AI 生成的空宿舍图片制作的 8 秒演示视频，没有真实现场内容。'
+ materials.append(dict(id=id,title=title,institution=institution,region=region,kind=kind,image='assets/'+image+'.webp',file='assets/demo-film.mp4' if kind=='视频' else 'assets/'+image+'.webp',summary=summary,source='AI 生成示意媒体；本站编写虚构文字',body=body,date='2026-10-08',version='0.2'))
+stories=[dict(id='story-a',institution='demo-a',title='把能确认的部分，慢慢整理清楚',author='示例作者',intro='一段经历的记录 · 虚构文字',paragraphs=['离开之后，我花了很长时间才开始整理那段记忆。起初只是把想到的事情写下来，不要求自己一次把所有细节都说清楚。','我先留下能够确认的时间和地点，把还不确定的部分单独标出来。几张保存下来的图片也放在这里，方便以后再补充背景。','写下这些，是希望经历能够被认真看见。记录可以慢慢补充，已经写下的内容也可以更正。'],attachments=['demo-002','demo-004'],date='2026-10-08'),dict(id='story-b',institution='demo-b',title='从一份旧记录开始',author='示例作者',intro='经历整理演示 · 虚构文字',paragraphs=['我翻到一份旧记录，才开始把那段时间的事情按顺序写下来。有的日期很清楚，有的只能记得大致的月份。','我把不确定的地方保留下来，也注明了它们还需要进一步核对。一次只整理一点，也可以。'],attachments=['demo-003'],date='2026-10-08')]
+topics=[dict(id='topic-a',title='经历很零散，可以从哪里开始整理？',tag='资料整理',intro='先从一件能够确认的事情开始，不必一次写完。',body='可以先记下大致时间、地点与保存的材料。不能确认的细节直接写明不确定。这里的帖子和回复都是演示，没有真实用户参与。',replies=['可以先整理手头的一张图片，记下它来自哪里。','不希望公开的内容可以保留在自己的私人记录中。']),dict(id='topic-b',title='下载的资料包怎样转给朋友？',tag='保存与传播',intro='说明和图片一起传递，接收者更容易理解。',body='资料包中的阅读说明、来源和版本应一起保留。不要只转发脱离背景的一张图片。本帖为演示。',replies=['先解压阅读说明，再决定分享文件还是链接。'])]
+d=dict(version='0.2',updated='2026-10-08',isDemo=True,institutions=institutions,materials=materials,stories=stories,topics=topics)
+(p/'public-data.json').write_text(json.dumps(d,ensure_ascii=False,indent=2))
+(p/'data.js').write_text('window.KANJIAN_DATA='+json.dumps(d,ensure_ascii=False,separators=(',',':'))+';\n')

@@ -1,0 +1,12 @@
+戒网瘾机构观察 · 来源目录与许可记录
+
+版本：2026-10-09
+目录1251条为来源记录，非已核实独立机构数量。私人原件另存本地资料库。公开副本只保留字段白名单，去除联系方式、负责人、举报摘要、私人经历、精确地址与坐标。
+
+来源：
+NCT archive：goodpsychologistclaw/nct-archive，仓库标注Unlicense。
+https://github.com/goodpsychologistclaw/nct-archive
+FunctionSir/PanDefenseProject：AGPL-3.0，JSON/CSV来源。
+https://github.com/FunctionSir/PanDefenseProject
+
+处理脚本：资料查找/工作区/scripts/build_local_library.py。本轮新增排序、地区文本匹配、来源追溯及字段筛选；未独立证实机构主体或原始举报。许可证原文随下载包保存。上游第三方报道、个人陈述和媒体权利不由仓库许可证自动解决；本包未搬运这些正文和媒体。

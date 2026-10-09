@@ -1,0 +1,27 @@
+node_modules/
+.sites-runtime/
+.preview/
+.env
+.dev.vars
+dist/client/
+dist/server/
+dist/.openai/
+scripts/test-zip.tmp
+
+# Local credentials, submissions and original media never belong in this repository.
+.openai/hosting.json
+.env.*
+!.env.example
+.dev.vars.*
+*.sqlite
+*.sqlite3
+*.db
+*.db-*
+*.sqlite3-*
+__pycache__/
+*.pyc
+private/
+backups/
+本地资料库/
+review-queue.json
+.github-upload-manifest.local.json

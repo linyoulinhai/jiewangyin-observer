@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+private-data/
+*.sqlite3*
+review-queue*.json
+minimized-source*.jsonl

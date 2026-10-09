@@ -1,0 +1,145 @@
+#!/usr/bin/env python3
+"""Preserve the entire existing registry locally; publish only a field allowlist."""
+import csv, hashlib, importlib.util, json, os, re, shutil, sqlite3, zipfile
+from pathlib import Path
+from datetime import datetime, timezone
+
+ROOT=Path(__file__).resolve().parents[3]
+WORK=ROOT/'资料查找/工作区'
+OUT=ROOT/'本地资料库'
+PUBLIC=ROOT/'概念展示站/dist'
+OUT.mkdir(exist_ok=True,mode=0o700)
+os.chmod(OUT,0o700)
+DATE='2026-10-09'
+spec=importlib.util.spec_from_file_location('old_registry',WORK/'scripts/build_institution_registry_1000.py')
+old=importlib.util.module_from_spec(spec);spec.loader.exec_module(old)
+merged=old.merge_records(old.parse_nct_text((WORK/'data/nct-archive-parsed.txt').read_text())+old.load_pdp()+old.kanjian_official_seeds())
+lookup={old.norm_key(r['primary_name'],r.get('address_text') or r.get('region_text','')):r for r in merged}
+docs=[json.loads(p.read_text()) for p in sorted((WORK/'机构档案-1000/entries').glob('*.json'))]
+for n,line in enumerate((WORK/'机构档案-1000/overflow.jsonl').read_text().splitlines(),1001):
+ r=json.loads(line);key=old.norm_key(r['display_name'],r.get('address_text') or r.get('region_text',''))
+ full=lookup.get(key)
+ if not full:raise ValueError('Cannot restore overflow provenance: '+r['display_name'])
+ docs.append(old.to_institution_doc(f'INST-{n:04d}',full))
+assert len(docs)==1251 and len({r['institution_id'] for r in docs})==1251
+
+sources=[
+ ('nct','NCT 全国矫正机构资料档案','https://github.com/goodpsychologistclaw/nct-archive','Unlicense',WORK/'参考项目-2026-10-09/源码/nct-archive/data/nct-data-zh.json'),
+ ('pdp-json','PanDefenseProject JSON','https://github.com/FunctionSir/PanDefenseProject','AGPL-3.0',WORK/'tools/PanDefenseProject/institute_list.json'),
+ ('pdp-csv','PanDefenseProject CSV','https://github.com/FunctionSir/PanDefenseProject','AGPL-3.0',WORK/'tools/PanDefenseProject/institute_list.csv'),
+ ('registry','原1000条目录及251条溢出记录','local:机构档案-1000','来源许可分别保留',WORK/'机构档案-1000/manifest.json'),
+ ('research','首批机构研究报告（助手整理，非Grok）','local:批次-2026-10-09-01','仅私人研究',WORK/'批次-2026-10-09-01/完整研究报告.txt')
+]
+copies=OUT/'原始资料';copies.mkdir(exist_ok=True,mode=0o700)
+for name in ['机构档案-1000','批次-2026-10-09-01','data']:
+ shutil.copytree(WORK/name,copies/name,dirs_exist_ok=True)
+for sid,_,_,_,path in sources:shutil.copy2(path,copies/(sid+'-'+path.name))
+for repo in ['nct-archive','PanDefenseProject']:
+ directory=WORK/'参考项目-2026-10-09/源码'/repo
+ for path in directory.glob('LICENSE*'):shutil.copy2(path,copies/(repo+'-'+path.name))
+
+dbpath=OUT/'机构资料库.sqlite3'
+temp=OUT/'机构资料库.build.sqlite3'
+if temp.exists():temp.unlink()
+db=sqlite3.connect(temp)
+db.executescript('''
+PRAGMA foreign_keys=ON;
+CREATE TABLE sources(id TEXT PRIMARY KEY,title TEXT,url TEXT,license TEXT,path TEXT,sha256 TEXT);
+CREATE TABLE source_rows(source TEXT REFERENCES sources(id),row_number INTEGER,raw_json TEXT,PRIMARY KEY(source,row_number));
+CREATE TABLE records(id TEXT PRIMARY KEY,name TEXT,region TEXT,city TEXT,verification TEXT,raw_json TEXT);
+CREATE INDEX records_region_name ON records(region,name);
+CREATE TABLE record_sources(record TEXT REFERENCES records(id),source TEXT REFERENCES sources(id),PRIMARY KEY(record,source));
+CREATE TABLE aliases(record TEXT REFERENCES records(id),name TEXT,PRIMARY KEY(record,name));
+CREATE TABLE duplicate_candidates(left_id TEXT REFERENCES records(id),right_id TEXT REFERENCES records(id),reason TEXT,PRIMARY KEY(left_id,right_id));
+''')
+for sid,title,url,lic,path in sources:
+ db.execute('INSERT INTO sources VALUES(?,?,?,?,?,?)',(sid,title,url,lic,str(path.relative_to(ROOT)),hashlib.sha256(path.read_bytes()).hexdigest()))
+nct=json.loads(sources[0][4].read_text())['data'];pdp=json.loads(sources[1][4].read_text())['content'];csvrows=list(csv.DictReader(sources[2][4].open()))
+for sid,rows in [('nct',nct),('pdp-json',pdp),('pdp-csv',csvrows)]:
+ for n,row in enumerate(rows,1):db.execute('INSERT INTO source_rows VALUES(?,?,?)',(sid,n,json.dumps(row,ensure_ascii=False)))
+
+PROVINCES=['北京','天津','河北','山西','内蒙古','辽宁','吉林','黑龙江','上海','江苏','浙江','安徽','福建','江西','山东','河南','湖北','湖南','广东','广西','海南','重庆','四川','贵州','云南','西藏','陕西','甘肃','青海','宁夏','新疆']
+TRANS=str.maketrans({'東':'东','慶':'庆','廣':'广','貴':'贵','遼':'辽','龍':'龙','江':'江','蘇':'苏','雲':'云','陝':'陕','寧':'宁'})
+nct_names={}
+for row in nct:nct_names.setdefault(row.get('name',''),[]).append(row)
+def region_info(r):
+ raw=(r.get('region',{}).get('raw_text','')+' '+r.get('address_raw','')).translate(TRANS)
+ candidates=nct_names.get(r['display_name'],[]) if r.get('source_type')=='crowd_report_archive' else []
+ provinces={x.get('province','').translate(TRANS) for x in candidates}-{''}
+ # A street named 北京路/河北路/泰山路 must never change the province.
+ if len(provinces)==1 and next(iter(provinces)) in PROVINCES:province=next(iter(provinces))
+ else:
+  normalized=re.sub(r'^\s*[（(][^）)]*[）)]\s*','',raw).strip()
+  province=next((p for p in sorted(PROVINCES,key=len,reverse=True) if normalized.startswith(p)),'待确认')
+ normalized=re.sub(r'^\s*[（(][^）)]*[）)]\s*','',raw).strip()
+ for prefix in ['广西壮族自治区','新疆维吾尔自治区','宁夏回族自治区','内蒙古自治区','西藏自治区']:
+  if normalized.startswith(prefix):normalized=normalized[len(prefix):]
+ if province not in ['北京','天津','上海','重庆','待确认']:
+  normalized=re.sub('^'+re.escape(province)+'省','',normalized)
+  if normalized.startswith(province) and not normalized.startswith(province+'市'):normalized=normalized[len(province):]
+ city_match=re.match(r'([\u4e00-\u9fff]{2,5}?市)',normalized)
+ city=city_match.group(1) if city_match else ''
+ if province in ['北京','天津','上海','重庆']:city=province
+ return province,city
+def valid_links(values):
+ links=[]
+ for value in values:
+  # Preserve only whole URLs. Ambiguous concatenations remain in the private original.
+  if isinstance(value,str) and re.fullmatch(r'https?://[^\s<>→]+',value) and not re.search(r'(?:1[3-9]\d{9}|\d{17}[\dXx])',value):
+   if value not in links:links.append(value)
+ return links
+
+public=[];name_groups={}
+for r in docs:
+ rid=r['institution_id'];name=r['display_name'];province,city=region_info(r)
+ db.execute('INSERT INTO records VALUES(?,?,?,?,?,?)',(rid,name,province,city,r.get('verification_status','待核实'),json.dumps(r,ensure_ascii=False)))
+ for alias in set(r.get('aliases',[])):db.execute('INSERT INTO aliases VALUES(?,?)',(rid,alias))
+ text=' '.join(r.get('sources',[]));origin=[]
+ if 'nct-archive' in text or r.get('source_type')=='crowd_report_archive':origin.append('nct')
+ if 'PanDefense' in text or r.get('source_type')=='crowd_list_pandefense':origin.append('pdp-json' if 'institute_list.json' in text else 'pdp-csv')
+ if r.get('source_type')=='news_or_official':origin.append('research')
+ origin.append('registry')
+ for sid in set(origin):db.execute('INSERT INTO record_sources VALUES(?,?)',(rid,sid))
+ name_groups.setdefault(re.sub(r'\s+','',name),[]).append(rid)
+ links=valid_links(r.get('sources',[])+r.get('evidences',[]))
+ for sid,title,url,_,_ in sources:
+  if sid in origin and url.startswith('http') and url not in links:links.append(url)
+ public.append(dict(id=rid,name=name,alias='、'.join(r.get('aliases',[])),region=province,city=city,materials=[],stories=[],isSource=True,
+  summary='原来源收录的机构线索；名称、地址、当前状态及主题相关性待本站核对。',verification='待核对',
+  originalVerification=r.get('verification_status','待核实'),sourceTypes=sorted(set(origin)-{'registry'}),sources=links,
+  capturedAt=r.get('captured_at',DATE),operatingStatus='当前状态未核实',version='source-2026-10-09',
+  regionNote='地区由原记录文本匹配，仅用于查找；不是已核实位置。'))
+for group in name_groups.values():
+ for i,a in enumerate(group):
+  for b in group[i+1:]:db.execute('INSERT INTO duplicate_candidates VALUES(?,?,?)',(a,b,'同名来源记录；不据此认定同一机构，待核对主体与地址'))
+db.commit();assert db.execute('PRAGMA integrity_check').fetchone()[0]=='ok';assert not db.execute('PRAGMA foreign_key_check').fetchall()
+stats={'records':len(docs),'rawNctRows':len(nct),'rawPdpJsonRows':len(pdp),'rawPdpCsvRows':len(csvrows),'duplicateCandidates':db.execute('SELECT count(*) FROM duplicate_candidates').fetchone()[0],'version':DATE,'scope':'来源记录数量，不是独立机构或已核实机构数量','privateFieldsExcluded':['contact','HMaster','scandal','experience','crowd_reports_summary','精确地址','原始坐标','私人身份']}
+db.close();os.replace(temp,dbpath)
+public.sort(key=lambda r:(PROVINCES.index(r['region']) if r['region'] in PROVINCES else 99,r['name'],r['id']))
+catalog={'format':'jiewangyin-source-catalog-v1','version':DATE,'notice':'来源目录，待本站核对；收录不代表违法认定、机构仍在运营或主体已确认。','stats':stats,'institutions':public,
+ 'sources':[{'id':sid,'title':title,'url':url,'license':lic} for sid,title,url,lic,_ in sources if url.startswith('http')]}
+(PUBLIC/'source-catalog.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2))
+(PUBLIC/'source-catalog.js').write_text('window.KANJIAN_SOURCE_CATALOG='+json.dumps(catalog,ensure_ascii=False)+';\n')
+with (PUBLIC/'source-catalog.csv').open('w',encoding='utf-8-sig',newline='') as f:
+ writer=csv.writer(f);writer.writerow(['资料编号','名称','别名记录','来源地区','来源城市','核对状态','来源入口','版本'])
+ for r in public:
+  values=[r['id'],r['name'],r['alias'],r['region'],r['city'],r['verification'],' | '.join(r['sources']),r['version']]
+  writer.writerow(["'"+v if v.startswith(('=','+','-','@')) else v for v in values])
+(OUT/'整理结果.json').write_text(json.dumps(stats,ensure_ascii=False,indent=2))
+directory=OUT/'机构条目';directory.mkdir(exist_ok=True,mode=0o700)
+for r in docs:(directory/(r['institution_id']+'.json')).write_text(json.dumps(r,ensure_ascii=False,indent=2))
+
+# Local standalone catalog contains only the public field allowlist. Full originals are reachable as relative local files.
+html='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>戒网瘾机构观察 · 本地资料库</title><style>body{font:16px/1.7 system-ui;max-width:1050px;margin:auto;padding:24px;color:#20304a}input,select{font:inherit;padding:10px;border:1px solid #ccd5e0;border-radius:6px;margin:4px;max-width:100%}article{border-bottom:1px solid #dde3eb;padding:14px 0}h1{font-size:26px}h2{font-size:19px;margin:6px 0}a{color:#165ad5}small{color:#526277}#list{overflow-wrap:anywhere}</style><h1>戒网瘾机构观察 · 本地资料库</h1><p>完整保存1251份原目录记录，并保留上游原始资料。这里是私人工作副本，包含未经核对的原件，请勿整库公开传播。</p><input id="q" type="search" placeholder="名称、别名或编号"><select id="region"><option value="">全部地区</option></select><p id="count"></p><div id="list"></div><button id="more">继续显示</button><script>const catalog=__CATALOG__;const rows=catalog.institutions;let limit=40;const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const regions=[...new Set(rows.map(r=>r.region))];for(const r of regions){const o=document.createElement('option');o.value=r;o.textContent=r;document.getElementById('region').append(o)}function draw(){const q=document.getElementById('q').value.trim().toLowerCase(),reg=document.getElementById('region').value;const filtered=rows.filter(r=>(!reg||r.region===reg)&&(!q||[r.name,r.alias,r.id].join(' ').toLowerCase().includes(q)));document.getElementById('count').textContent=filtered.length+'份来源记录；不是核实机构数量';document.getElementById('list').innerHTML=filtered.slice(0,limit).map(r=>'<article><small>'+esc(r.region)+' · '+esc(r.id)+' · 待核对</small><h2>'+esc(r.name)+'</h2><p>'+esc(r.alias||'原来源未提供别名')+'</p><a href="机构条目/'+r.id+'.json">打开完整私人条目</a></article>').join('');document.getElementById('more').hidden=limit>=filtered.length}document.getElementById('q').oninput=()=>{limit=40;draw()};document.getElementById('region').onchange=()=>{limit=40;draw()};document.getElementById('more').onclick=()=>{limit+=40;draw()};draw();</script></html>'''
+(OUT/'打开资料库.html').write_text(html.replace('__CATALOG__',json.dumps(catalog,ensure_ascii=False).replace('</','<\\/')))
+public_html=html.replace('本地资料库','公开来源目录').replace('完整保存1251份原目录记录，并保留上游原始资料。这里是私人工作副本，包含未经核对的原件，请勿整库公开传播。','查找1251份来源记录；收录不代表违法认定。此页只有公开目录字段，原件与私人信息不在包内。').replace('机构条目/','../index.html#institution/').replace("+r.id+'.json'", "+r.id")
+# Explicitly replace the local-original link; never ship a relative link to the private entry directory.
+public_html=public_html.replace("+r.id+'.json\">打开完整私人条目", "+r.id+'\">打开来源档案")
+(PUBLIC/'tools/source-directory.html').write_text(public_html.replace('__CATALOG__',json.dumps(catalog,ensure_ascii=False).replace('</','<\\/')))
+(OUT/'README.txt').write_text('戒网瘾机构观察 · 本地资料库\n\n先打开“打开资料库.html”查名称和地区，再打开“机构条目”内的完整JSON。数据库为机构资料库.sqlite3，表包括来源、上游原始行、机构来源记录、别名和同名待核对关系。原始资料目录保留旧1000条、251条溢出、首批研究报告、原始页面及JSON/CSV。\n\n1251是来源记录，不是核实机构数。同名和别名没有自动认定为同一主体。4条旧记录的“有材料支持”标记保留在原件，公开目录统一待核对。缺失的图片视频未凭空补齐；现有媒体候选多为链接，尚未取得文件及再传播授权。\n\n网页使用白名单字段，不含负责人、联系方式、举报摘要、详细地址、坐标和私人经历。私人数据库与JSON不进入网站下载包。外部资料继续通过来源链接查看。\n\n重新整理：在项目根目录执行 python3 资料查找/工作区/scripts/build_local_library.py。该脚本仅处理本地已存资料，不联网抓取，不覆写原始来源。\n')
+with zipfile.ZipFile(OUT/'本地完整资料库-私人备份.zip','w',zipfile.ZIP_DEFLATED) as z:
+ for path in sorted(OUT.rglob('*')):
+  if path.is_file() and path.name!='本地完整资料库-私人备份.zip':z.write(path,path.relative_to(OUT))
+for path in OUT.rglob('*'):
+ os.chmod(path,0o700 if path.is_dir() else 0o600)
+print(json.dumps(stats,ensure_ascii=False))

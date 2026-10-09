@@ -1,0 +1,31 @@
+{
+  "records": [
+    {
+      "platform": "douyin",
+      "kind": "video",
+      "video_id": "123456789",
+      "text": "纯模拟示例，用来测试导入；不是实际视频证据或指控。",
+      "captured_at": "2026-10-08T12:00:00+08:00"
+    },
+    {
+      "platform": "douyin",
+      "kind": "comment",
+      "video_id": "123456789",
+      "comment_id": "example-comment-001",
+      "text": "纯模拟评论，不代表真实人物发言。",
+      "captured_at": "2026-10-08T12:01:00+08:00"
+    },
+    {
+      "platform": "bilibili",
+      "kind": "video",
+      "video_id": "av123456789",
+      "text": "纯模拟 B站导入示例，不对应经核查的来源。"
+    }
+  ],
+  "pagination": {
+    "complete": false,
+    "has_more": true,
+    "pages_fetched": 1,
+    "next_cursor": 10
+  }
+}
