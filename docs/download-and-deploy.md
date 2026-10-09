@@ -1,5 +1,11 @@
 # 下载、复制与部署
 
+## 各平台与普通人接力
+
+具体84项路线见[多平台传播保存指南](multiplatform-distribution.md)。不是每位用户都要学Git：可下载公开传播导读包，先读TXT，按需要转发、另存表格或解压网站包。包内同时保留[原作者与提供者署名](../ACKNOWLEDGEMENTS.md)。
+
+微信/QQ传文件，图文和视频平台展示，国内文档放目录，国内网盘与Release放下载副本，不同维护者与运营方保存独立版本。传播清单与实测结果分开；尚未开通的平台不登记为真实备用网址。
+
 ## 只想保存或转发
 
 在Releases下载 `jiewangyin-observer-public-site-2026-10-09.zip`，解压后查看 `README.txt` 与 `index.html`。浏览器本地文件策略和手机文件预览器存在差异；独立 `tools/source-directory.html`、CSV与JSON是备用阅读办法。

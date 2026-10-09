@@ -4,7 +4,19 @@
 
 这是可运行的试用项目，保留来源、核对状态和公开范围。目录收录不意味着已经认定机构违法，也不意味着机构仍在经营。项目不接受收费推广。
 
-[查看网站](https://kanjian-archive-concept.chengbiliu3.chatgpt.site/) · [详细项目说明](docs/project-guide.md) · [下载与复制](docs/download-and-deploy.md) · [参与贡献](CONTRIBUTING.md) · [资料查找交接](docs/research-handoff.txt)
+[查看网站](https://kanjian-archive-concept.chengbiliu3.chatgpt.site/) · [详细项目说明](docs/project-guide.md) · [下载与复制](docs/download-and-deploy.md) · [参与贡献](CONTRIBUTING.md) · [资料查找交接](docs/research-handoff.txt) · [原作者与致谢](ACKNOWLEDGEMENTS.md) · [各平台传播与保存](docs/multiplatform-distribution.md)
+
+## 项目提供者与来源
+
+感谢 **[FunctionSir及PanDefenseProject贡献者](https://github.com/FunctionSir/PanDefenseProject)**、**[goodpsychologistclaw及nct-archive贡献者](https://github.com/goodpsychologistclaw/nct-archive)** 提供公开目录基础，感谢 **[NO-CONVERSION-THERAPY](https://github.com/NO-CONVERSION-THERAPY)**、BornFreeFearlessinLove、2beTechnetium、Perity-ctrl等原作者提供可研究的相关项目。这里保留原作者署名与实际使用范围，不将他们写成已经加入本站的合作方。素材作者、工具贡献者与全部来源见[致谢页](ACKNOWLEDGEMENTS.md)。
+
+## 各个平台怎样传播、保存
+
+[多平台指南](docs/multiplatform-distribution.md)现有**84项平台与形式、9组路线**，包含国内社交平台、在线文档、网盘、源码镜像、Wiki/论坛、静态托管、境外备用与手机离线接力。已上线与候选分开，不承诺所有方案永久免费或国内都可达。
+
+微信/QQ可转交小ZIP和导读；微博、贴吧、知乎、小红书可发公开图文导读；B站、抖音、快手、视频号展示授权播放版；腾讯文档/飞书等放可查目录；蓝奏、123、移动/天翼等试公开包下载；GitHub Releases仍保留为可分发公开媒体包的途径。各项操作、公开范围、免费条件与下载测试写在指南中，保留现有备选。
+
+普通人可使用[平台发布模板](docs/distribution-templates/平台发布模板.txt)。维护者运行 `python3 scripts/build-distribution-kit.py --output /path/outside-repo/公开传播导读包.zip` 生成包含署名、说明、目录、网站包和校验清单的转交ZIP。程序只打包公开白名单，不上传或发送消息。
 
 ## 不懂代码，也能使用
 

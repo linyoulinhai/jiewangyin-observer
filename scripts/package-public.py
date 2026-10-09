@@ -22,7 +22,7 @@ files=[f for f in p.rglob('*') if f.is_file() and f.name not in {'site-copy.zip'
 allowed={'index.html','styles.css','icons.js','community.js','app.js','views.js','drafts.js','actions.js','data.js','map-data.js','public-data.json','README.txt','LICENSE.txt','assets/linyi-exterior-2016.jpg','assets/real-photo-credit.txt','assets/campus.webp','assets/documents.webp','assets/dormitory.webp','assets/demo-film.mp4','assets/china-regions.geojson','tools/media-pack.html'}|{'packages/'+f.name for f in package_dir.glob('*.zip')}
 allowed|={'assets/icons/'+f.name for f in (p/'assets/icons').iterdir() if f.is_file()}
 allowed|={'source-catalog.js','source-catalog.json','source-catalog.csv','sha256.js','intake.js','archive-ui.js','backup-ui.js','pwa.js','service-worker.js','manifest.webmanifest','access-points.json','assets/brand.svg','tools/intake-offline.html','tools/restore-private.mjs','tools/recovery-schema.sql','tools/恢复私人备份说明.txt','SOURCE-LICENSES.txt','tools/source-directory.html'}
-allowed|={'NCT-LICENSE.txt','PanDefense-LICENSE.txt','tools/build-local-library.py.txt'}
+allowed|={'ACKNOWLEDGEMENTS.txt','MULTIPLATFORM-GUIDE.txt','NCT-LICENSE.txt','PanDefense-LICENSE.txt','tools/build-local-library.py.txt'}
 files=[f for f in files if f.relative_to(p).as_posix() in allowed]
 manifest=dict(format='kanjian-public-files-v1',version='2026-10-09-source-library',demoVersion=d['version'],isDemo=False,sourceRecords=1251,files=[dict(path=f.relative_to(p).as_posix(),size=f.stat().st_size,sha256=hashlib.sha256(f.read_bytes()).hexdigest()) for f in sorted(files)])
 (p/'public-files.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2))

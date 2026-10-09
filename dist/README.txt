@@ -14,3 +14,6 @@
 PWA：支持条件下可加入主屏幕并缓存固定公开目录，不能保证后台上传或浏览器永不清理缓存；私人API和回执没有放入服务工作线程缓存。
 
 来源及许可见SOURCE-LICENSES.txt、NCT-LICENSE.txt、PanDefense-LICENSE.txt与图标许可。原先AI图片/视频仍仅用于演示，不是真实机构影像。
+
+项目提供者与署名：ACKNOWLEDGEMENTS.txt，保留原作者、实际资料来源及参考用途。
+各平台传播与保存：MULTIPLATFORM-GUIDE.txt，包含84项路线、免费条件及实际未开通的说明；不等于84个已上线镜像。

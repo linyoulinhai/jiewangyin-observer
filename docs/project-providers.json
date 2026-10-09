@@ -1,0 +1,104 @@
+{
+  "note": "上游作者与项目来源，不表示已加入本站或已建立合作；不含私人路径。",
+  "projects": [
+    {
+      "name": "PanDefenseProject",
+      "upstream": "FunctionSir/PanDefenseProject",
+      "upstream_url": "https://github.com/FunctionSir/PanDefenseProject",
+      "fork_url": "https://github.com/linyoulinhai/PanDefenseProject",
+      "license": "AGPL-3.0",
+      "local_sha": "c98a471adc4bebf60d52c1094dda5e34d05166ba",
+      "checked_at": "2026-10-09"
+    },
+    {
+      "name": "nct-archive",
+      "upstream": "goodpsychologistclaw/nct-archive",
+      "upstream_url": "https://github.com/goodpsychologistclaw/nct-archive",
+      "fork_url": "https://github.com/linyoulinhai/nct-archive",
+      "license": "Unlicense",
+      "local_sha": "bbce1e7681725f38964ce6e46e14479401165781",
+      "checked_at": "2026-10-09"
+    },
+    {
+      "name": "prison-map",
+      "upstream": "BornFreeFearlessinLove/prison-map",
+      "upstream_url": "https://github.com/BornFreeFearlessinLove/prison-map",
+      "fork_url": "https://github.com/linyoulinhai/prison-map",
+      "license": null,
+      "local_sha": "9bb37dfc36a3bbcab5a2cb6bdea27832395e8bd4",
+      "checked_at": "2026-10-09"
+    },
+    {
+      "name": "school-search-data",
+      "upstream": "2beTechnetium/school-search-data",
+      "upstream_url": "https://github.com/2beTechnetium/school-search-data",
+      "fork_url": "https://github.com/linyoulinhai/school-search-data",
+      "license": null,
+      "local_sha": "71afcff67a599e30fa1a2bdd0aa052cbadf69b95",
+      "checked_at": "2026-10-09"
+    },
+    {
+      "name": "fanjwyjg",
+      "upstream": "Perity-ctrl/fanjwyjg",
+      "upstream_url": "https://github.com/Perity-ctrl/fanjwyjg",
+      "fork_url": "https://github.com/linyoulinhai/fanjwyjg",
+      "license": "MIT",
+      "local_sha": "f663dafb4f7add38f032a4947849d46d712f61b0",
+      "checked_at": "2026-10-09"
+    },
+    {
+      "name": "NCT_frontend",
+      "upstream": "NO-CONVERSION-THERAPY/NCT_frontend",
+      "upstream_url": "https://github.com/NO-CONVERSION-THERAPY/NCT_frontend",
+      "fork_url": "https://github.com/linyoulinhai/NCT_frontend",
+      "license": "Apache-2.0",
+      "local_sha": "44dbfc1e47f9b1c5b8da854db31052d177bc6f9e",
+      "checked_at": "2026-10-09"
+    },
+    {
+      "name": "NCT_API",
+      "upstream": "NO-CONVERSION-THERAPY/NCT_API",
+      "upstream_url": "https://github.com/NO-CONVERSION-THERAPY/NCT_API",
+      "fork_url": "https://github.com/linyoulinhai/NCT_API",
+      "license": "Apache-2.0",
+      "local_sha": "3044a29794bf629976a933e9ba8edbeef7b88494",
+      "checked_at": "2026-10-09"
+    },
+    {
+      "name": "NCT_database",
+      "upstream": "NO-CONVERSION-THERAPY/NCT_database",
+      "upstream_url": "https://github.com/NO-CONVERSION-THERAPY/NCT_database",
+      "fork_url": "https://github.com/linyoulinhai/NCT_database",
+      "license": "AGPL-3.0",
+      "local_sha": "7931862d077e3960e5483e4697a0299828cf00fd",
+      "checked_at": "2026-10-09"
+    },
+    {
+      "name": "NCT_backend",
+      "upstream": "NO-CONVERSION-THERAPY/NCT_backend",
+      "upstream_url": "https://github.com/NO-CONVERSION-THERAPY/NCT_backend",
+      "fork_url": "https://github.com/linyoulinhai/NCT_backend",
+      "license": null,
+      "local_sha": "17f1a02794a6ac375cd386bf76ec2c7ed57f90d8",
+      "checked_at": "2026-10-09"
+    },
+    {
+      "name": "NCT_VIEW",
+      "upstream": "NO-CONVERSION-THERAPY/NCT_VIEW",
+      "upstream_url": "https://github.com/NO-CONVERSION-THERAPY/NCT_VIEW",
+      "fork_url": "https://github.com/linyoulinhai/NCT_VIEW",
+      "license": "Apache-2.0",
+      "local_sha": "c6d8f989769c3b5cd652a2fd0c11a5f48476921b",
+      "checked_at": "2026-10-09"
+    },
+    {
+      "name": "AKBP",
+      "upstream": "FunctionSir/AKBP",
+      "upstream_url": "https://github.com/FunctionSir/AKBP",
+      "license": "AGPL-3.0",
+      "local_sha": "0a338f97fff11ab4b9f9d69249c50b76c91538e8",
+      "checked_at": "2026-10-09",
+      "use": "代码已阅读，未接入，未Fork"
+    }
+  ]
+}
